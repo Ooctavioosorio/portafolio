@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "correo": "juan.perez@example.com"
+    },
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellido": "García",
+      "correo": "maria.garcia@example.com"
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "apellido": "Rodríguez",
+      "correo": "carlos.rodriguez@example.com"
+    },
+    {
+      "id": 4,
+      "nombre": "Ana",
+      "apellido": "López",
+      "correo": "ana.lopez@example.com"
+    },
+    {
+      "id": 5,
+      "nombre": "Luis",
+      "apellido": "Martínez",
+      "correo": "luis.martinez@example.com"
+    },
+    {
+      "id": 6,
+      "nombre": "Laura",
+      "apellido": "Hernández",
+      "correo": "laura.hernandez@example.com"
+    },
+    {
+      "id": 7,
+      "nombre": "Pedro",
+      "apellido": "Sánchez",
+      "correo": "pedro.sanchez@example.com"
+    },
+    {
+      "id": 8,
+      "nombre": "Julia",
+      "apellido": "González",
+      "correo": "julia.gonzalez@example.com"
+    },
+    {
+      "id": 9,
+      "nombre": "David",
+      "apellido": "Fernández",
+      "correo": "david.fernandez@example.com"
+    },
+    {
+      "id": 10,
+      "nombre": "Elena",
+      "apellido": "Jiménez",
+      "correo": "elena.jimenez@example.com"
+    }
+  ]
+  
