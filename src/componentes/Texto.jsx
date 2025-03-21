@@ -7,13 +7,9 @@ export const Texto = () => {
     settexto(event.target.value);
   };
 
-  useEffect(() => {
-    console.log("prueba2");
-  }, []);
-
   return (
     <>
-      <input type="text" onChange={text} />
+      <input type="text" onChange={text} placeholder="escriba aca" />
       <h2>{texto}</h2>
     </>
   );

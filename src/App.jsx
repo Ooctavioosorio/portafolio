@@ -17,6 +17,7 @@ export const App = () => {
 
   return (
     <>
+      {/* se le hace un map aca en el padre al arrays usuario que titne asigando el arrays listadoy se muestra en el hijo que es el componente Usuario */}
       {usuario.map((user) => (
         <Usuario
           key={user.nombre}

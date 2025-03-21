@@ -13,7 +13,7 @@ export const Listas = () => {
   useEffect(() => {
     productos().then((res) => {
       setproduct(res);
-      console.log(res);
+      
     });
   }, []);
 
