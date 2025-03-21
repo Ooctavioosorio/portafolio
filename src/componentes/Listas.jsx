@@ -23,7 +23,7 @@ export const Listas = () => {
 
       {product.map((producto) => (
         <div className="contenedor" key={producto.id}>
-          <p>{producto.id} </p>
+          <p>{producto.id}</p>
           <p>{producto.nombre} </p>
           <p>{producto.apellido} </p>
           <p>{producto.correo} </p>
