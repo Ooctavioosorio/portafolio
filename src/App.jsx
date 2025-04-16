@@ -9,13 +9,18 @@ function App() {
   return (
     <>
       <Encabezado />
-      <Inicio />
-      <SobreMi />
-      <Proyectos />
-      <Contacto />
+
+      <div className="fondo-global">
+        <Inicio />
+        <SobreMi />
+        <Proyectos />
+        <Contacto />
+      </div>
+
       <PiePagina />
     </>
   );
 }
 
 export default App;
+
