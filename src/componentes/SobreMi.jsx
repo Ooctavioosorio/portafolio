@@ -6,20 +6,50 @@ function SobreMi() {
       <div className="sobremi-contenido">
         <div className="biografia-profesional">
           <p className="introduccion">
-            Soy un <span className="destacado">desarrollador Full Stack apasionado</span> por crear soluciones digitales que combinan 
-            la excelencia técnica con una experiencia de usuario excepcional. Mi trayectoria profesional me ha permitido 
-            desarrollar una visión integral del desarrollo web, desde la arquitectura del backend hasta los más mínimos 
-            detalles de la interfaz.          
-          </p>
+  <span className="destacado">Desarrollador Full Stack apasionado</span>
+  <span className="descripcion-intro">Por crear soluciones digitales que combinan la excelencia técnica con una experiencia de usuario excepcional. Mi trayectoria profesional me ha permitido desarrollar una visión integral del desarrollo web, desde la arquitectura del backend hasta los más mínimos detalles de la interfaz.</span>
+</p>
           
           <div className="filosofia-trabajo">
             <h3>Mi filosofía de trabajo</h3>
             <ul className="lista-filosofia">
-              <li><span className="icono-filosofia">🔥</span> <strong>Aprendizaje continuo:</strong> Me mantengo constantemente actualizado con las últimas tecnologías y tendencias.</li>
-              <li><span className="icono-filosofia">🛠️</span> <strong>Código limpio:</strong> Priorizo la legibilidad y la mantenibilidad en cada línea de código que escribo.</li>
-              <li><span className="icono-filosofia">👥</span> <strong>Colaboración efectiva:</strong> Trabajo eficazmente en equipos multidisciplinarios para alcanzar objetivos comunes.</li>
-              <li><span className="icono-filosofia">💡</span> <strong>Orientación a soluciones:</strong> Me enfoco en resolver problemas reales con soluciones prácticas y efectivas.</li>
-            </ul>
+  <li>
+  <div className="filosofia-contenido">
+    <div className="filosofia-titulo">
+      <span className="icono-filosofia">🔥</span>
+      <strong>Aprendizaje continuo:</strong>
+    </div>
+    <div className="filosofia-descripcion">Me mantengo constantemente actualizado con las últimas tecnologías y tendencias.</div>
+  </div>
+</li>
+<li>
+  <div className="filosofia-contenido">
+    <div className="filosofia-titulo">
+      <span className="icono-filosofia">🛠️</span>
+      <strong>Código limpio:</strong>
+    </div>
+    <div className="filosofia-descripcion">Priorizo la legibilidad y la mantenibilidad en cada línea de código que escribo.</div>
+  </div>
+</li>
+<li>
+  <div className="filosofia-contenido">
+    <div className="filosofia-titulo">
+      <span className="icono-filosofia">👥</span>
+      <strong>Colaboración efectiva:</strong>
+    </div>
+    <div className="filosofia-descripcion">Trabajo eficazmente en equipos multidisciplinarios para alcanzar objetivos comunes.</div>
+  </div>
+</li>
+<li>
+  <div className="filosofia-contenido">
+    <div className="filosofia-titulo">
+      <span className="icono-filosofia">💡</span>
+      <strong>Orientación a soluciones:</strong>
+    </div>
+    <div className="filosofia-descripcion">Me enfoco en resolver problemas reales con soluciones prácticas y efectivas.</div>
+  </div>
+</li>
+</ul>
           </div>
         </div>
         

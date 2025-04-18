@@ -6,9 +6,9 @@ function PiePagina() {
         <div className="footer-seccion">
           <div className="footer-logo-container">
             <div className="footer-logo">
-              <img src="/logo.png" alt="Logo de Oscar Octavio" className="footer-logo-img" />
+              <img src="/logo.png" alt="Logo de Oscar Osorio" className="footer-logo-img" />
             </div>
-            <h3>Oscar Octavio</h3>
+            <h3>Oscar Osorio</h3>
           </div>
           <p className="footer-descripcion">Desarrollador Full Stack especializado en crear experiencias digitales excepcionales.</p>
         </div>
@@ -33,7 +33,7 @@ function PiePagina() {
       </div>
 
       <div className="footer-copyright">
-        <p>© {new Date().getFullYear()} | Todos los derechos reservados | Oscar Octavio Osorio Oliver</p>
+        <p>© {new Date().getFullYear()} | Todos los derechos reservados | Oscar Osorio Osorio Oliver</p>
       </div>
     </footer>
   )

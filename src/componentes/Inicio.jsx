@@ -4,7 +4,7 @@ function Inicio() {
       <div className="inicio-contenido">
         <div className="inicio-texto">
           <span className="saludo">👋 Hola, soy</span>
-          <h1 className="nombre">Oscar Octavio <span className="apellidos">Osorio Oliver</span></h1>
+          <h1 className="nombre">Oscar Osorio <span className="apellidos">Osorio Oliver</span></h1>
           <h2 className="titulo-profesional">Desarrollador <span className="highlight">Full Stack</span></h2>
           
           <p className="descripcion">
@@ -34,10 +34,7 @@ function Inicio() {
             </li>
           </ul>
           
-          <div className="botones-accion">
-            <a href="#proyectos" className="boton boton-primario">Ver proyectos</a>
-            <a href="#contacto" className="boton boton-secundario">Contactar</a>
-          </div>
+
         </div>
       </div>
     </section>

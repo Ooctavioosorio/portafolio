@@ -45,16 +45,179 @@ h1, h2, h3 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+  position: relative;
 }
 
+#inicio .nombre {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 0.2em;
+  display: block;
+}
+#inicio .titulo-profesional {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 600px) {
+  #inicio .nombre {
+    font-size: 2.8rem;
+  }
+  #inicio .titulo-profesional {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 900px) {
+  #inicio .nombre {
+    font-size: 3.2rem;
+  }
+  #inicio .titulo-profesional {
+    font-size: 2.1rem;
+  }
+}
+
+
+
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   position: relative;
   display: inline-block;
   margin-bottom: 2rem;
 }
 
-/* Se eliminó la línea decorativa de los títulos h2 */
+#sobremi h2 {
+  font-size: 2.1rem;
+}
+
+@media (min-width: 600px) {
+  #sobremi h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 900px) {
+  #sobremi h2 {
+    font-size: 3rem;
+  }
+}
+
+
+/* Línea decorativa añadida a los títulos principales y de tarjetas */
+
+.introduccion {
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+.introduccion .destacado {
+  display: block;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+  color: #fff;
+}
+.descripcion-intro {
+  display: block;
+  color: #fff;
+  font-size: 1em;
+  margin-top: 0;
+}
+
+
+.lista-filosofia {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lista-filosofia li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.filosofia-contenido {
+  display: flex;
+  flex-direction: column;
+}
+.filosofia-titulo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  gap: 0.4em;
+}
+.filosofia-descripcion {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+  margin-left: 0;
+}
+.icono-filosofia {
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+.filosofia-titulo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.filosofia-descripcion {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+/* Alinea título y descripción en columna */
+.filosofia-titulo, .filosofia-descripcion {
+  display: block;
+}
+
+
+.header-principal .nombre {
+  color: #0066ff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-weight: 800;
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.1em;
+}
+
+.nombre-sitio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.2em;
+  padding-bottom: 1em;
+}
+
+@media (min-width: 600px) {
+  .header-principal .nombre {
+    font-size: 2.5rem;
+  }
+  .nombre-sitio {
+    padding-top: 1.5em;
+    padding-bottom: 1.2em;
+  }
+}
+
+@media (min-width: 900px) {
+  .header-principal .nombre {
+    font-size: 2.8rem;
+  }
+  .nombre-sitio {
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+  }
+}
+
+
+.header-principal .profesion {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-weight: 800;
+}
+
 
 p {
   margin-bottom: 1.5rem;
@@ -67,7 +230,7 @@ p {
       rgba(26, 26, 46, 0.92),
       rgba(26, 26, 46, 0.85)
     ),
-    url("/fondo.png");
+    url("/fondo.avif");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -195,20 +358,22 @@ section {
 }
 
 section#inicio {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 8rem !important;
+  padding-bottom: 0.5rem !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 85vh;
-  overflow: hidden; /* Esto evitará que cualquier elemento se desborde y cree líneas no deseadas */
+  overflow: hidden;
   position: relative;
 }
 
 .inicio-contenido {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.1rem;
+  max-width: 92vw;
+  margin: 0 auto;
 }
 
 .inicio-texto {
@@ -259,6 +424,7 @@ section#inicio {
   line-height: 1.7;
   margin-bottom: 1.5rem;
   max-width: 750px;
+  text-align: justify;
 }
 
 .destacado {
@@ -274,6 +440,7 @@ section#inicio {
   line-height: 1.6;
   margin-bottom: 1rem;
   max-width: 750px;
+  text-align: justify;
 }
 
 .lista-beneficios {
@@ -358,46 +525,6 @@ section#inicio {
   flex-shrink: 0;
 }
 
-.botones-accion {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.boton {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  text-align: center;
-  transition: all var(--transition-speed) ease;
-}
-
-.boton-primario {
-  background-color: var(--primary-color);
-  color: white;
-  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-}
-
-.boton-primario:hover {
-  background-color: #2980b9;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
-}
-
-.boton-secundario {
-  background-color: transparent;
-  color: var(--text-light);
-  border: 2px solid var(--primary-color);
-}
-
-.boton-secundario:hover {
-  background-color: rgba(52, 152, 219, 0.1);
-  transform: translateY(-3px);
-}
-
 section h2 {
   color: var(--primary-color);
 }
@@ -405,8 +532,18 @@ section h2 {
 /* Proyectos sección */
 .proyectos-encabezado {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 3rem;
+  max-width: 92vw;
+  margin: 0 auto 1.2rem;
+}
+
+.proyectos-intro {
+  font-size: 0.97rem;
+}
+
+.lista-proyectos {
+  max-width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .proyectos-intro {
@@ -765,13 +902,18 @@ section h2 {
 .sobremi-contenido {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin-top: 1.5rem;
+  gap: 1.1rem;
+  margin-top: 0.6rem;
+  max-width: 92vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .biografia-profesional {
   max-width: 100%;
 }
+
+
 
 .introduccion {
   font-size: 1.15rem;
@@ -1101,4 +1243,230 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .header-principal {
+    padding: 0.7rem 2%;
+    position: static;
+  }
+  .contenedor-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .logo-container {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .nombre-sitio {
+    align-items: center;
+    text-align: center;
+  }
+  /* Botón hamburguesa visible solo en móviles */
+  .menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    z-index: 110;
+  }
+  .hamburguesa-linea {
+    width: 28px;
+    height: 3px;
+    background: var(--text-light);
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  /* Ocultar menú por defecto en móviles */
+  .nav-principal {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    background: var(--dark-bg);
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: stretch;
+    padding: 1.5rem 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    z-index: 100;
+  }
+  .nav-principal.nav-abierto {
+    display: flex;
+    animation: fadeInDown 0.3s;
+  }
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .nav-link {
+    justify-content: flex-start;
+    padding: 0.9rem 0.7rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+  }
+  section {
+    padding: 3rem 5%;
+  }
+  .footer-contenido {
+    grid-template-columns: 1fr;
+    padding: 2rem 0.5rem;
+  }
+  .proyectos-cta {
+    padding: 2rem 0.5rem;
+  }
+  .lista-proyectos {
+    grid-template-columns: 1fr;
+  }
+}
 
+@media (max-width: 480px) {
+  .whatsapp-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    min-height: 18px;
+    margin-left: 6px !important;
+  }
+  .header-principal {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+  }
+  .contenedor-header {
+    min-height: 70px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    gap: 0;
+  }
+  .nombre-sitio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-size: 0.93rem;
+  }
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+  .contenedor-header {
+    padding: 0.2rem 0;
+    gap: 0.2rem;
+    max-width: 98vw;
+  }
+  .logo-container {
+    gap: 0.2rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .logo-personal, .logo-img, .footer-logo, .footer-logo-img {
+    width: 32px;
+    height: 32px;
+    display: none !important; /* Oculta el logo en móviles */
+  }
+  .nombre-sitio {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .nombre {
+    font-size: 1.32rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.1rem;
+  }
+  .profesion {
+    font-size: 0.75rem;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.1rem;
+  }
+  .nav-link {
+    font-size: 0.93rem;
+    padding: 0.7rem 0.2rem;
+  }
+  .header-principal {
+    padding: 0.4rem 1%;
+  }
+  section {
+    padding: 0.7rem 1%;
+    max-width: 95vw;
+  }
+  .proyectos-cta {
+    padding: 0.7rem 0.1rem;
+  }
+
+  .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #25D366;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 1.08rem;
+    padding: 0.7rem 1.7rem;
+    border-radius: 30px;
+    text-decoration: none !important;
+    box-shadow: 0 4px 12px rgba(37,211,102,0.14);
+    border: none;
+    transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  .whatsapp-btn:hover, .whatsapp-btn:focus, .whatsapp-btn:active {
+    text-decoration: none !important;
+  }
+  .whatsapp-btn *, .whatsapp-btn svg, .whatsapp-btn span {
+    text-decoration: none !important;
+  }
+  .whatsapp-btn:hover {
+    background: #128C7E;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(37,211,102,0.22);
+    text-decoration: none;
+  }
+
+}
+
+/* Ocultar botón hamburguesa en escritorio */
+@media (min-width: 769px) {
+  .menu-hamburguesa {
+    display: none;
+  }
+  .nav-principal {
+    display: flex !important;
+    position: static;
+    background: none;
+    flex-direction: row;
+    gap: 1.2rem;
+    align-items: center;
+    padding: 0;
+    box-shadow: none;
+  }
+}
