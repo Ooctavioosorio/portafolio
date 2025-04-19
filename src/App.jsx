@@ -1,3 +1,4 @@
+import React from "react";
 import Encabezado from "./componentes/Encabezado";
 import Inicio from "./componentes/Inicio";
 import SobreMi from "./componentes/SobreMi";
@@ -6,6 +7,7 @@ import Contacto from "./componentes/Contacto";
 import PiePagina from "./componentes/PiePagina";
 
 function App() {
+
   return (
     <>
       <Encabezado />
@@ -19,7 +21,7 @@ function App() {
 
       <PiePagina />
       
-      {/* Botón flotante de WhatsApp */}
+
       <a 
         href="https://wa.me/573005466325" 
         className="whatsapp-flotante" 

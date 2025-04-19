@@ -2,17 +2,15 @@
 :root {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
-  --dark-bg: #008080; /* Azul verdoso (teal) para encabezado y pie de página */
-  --teal-shadow: rgba(0, 128, 128, 0.5); /* Sombra para el azul verdoso */
+  --dark-bg: #008080;
+  --teal-shadow: rgba(0, 128, 128, 0.5);
   --light-bg: #f8f9fa;
   --text-light: #fff;
   --text-dark: #333;
   --accent-color: #e74c3c;
   --card-bg: rgba(255, 255, 255, 0.1);
-  --transition-speed: 0.3s;
   --section-spacing: 5rem;
   --border-radius: 12px;
-  --mobile-width: 480px;
   --tablet-width: 768px;
   --desktop-width: 900px;
   --mobile-font-size: 14px;
@@ -27,6 +25,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 /* Contenedor principal */
@@ -48,17 +47,20 @@
   }
   
   .nav-principal {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: var(--dark-bg);
-    padding: 1rem;
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--card-bg);
+    padding: 2rem;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    backdrop-filter: blur(10px);
     z-index: 1000;
+    transition: all var(--transition-speed);
   }
   
   .nav-principal.nav-abierto {
@@ -70,6 +72,47 @@
     text-align: center;
     padding: 0.5rem;
     font-size: var(--mobile-font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-color);
+  }
+
+  .modo-oscuro-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color var(--transition-speed);
+  }
+
+  .modo-oscuro-btn:hover {
+    color: var(--primary-color);
+  }
+
+  .whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color var(--transition-speed);
+  }
+
+  .whatsapp-btn:hover {
+    color: var(--primary-color);
   }
   
   .nav-icon {
@@ -122,6 +165,7 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 h1, h2, h3 {
@@ -322,6 +366,16 @@ p {
   background-attachment: fixed;
   color: var(--text-light);
   padding: 0;
+  transition: background-image var(--transition-speed);
+}
+
+[data-theme="dark"] .fondo-global {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.95),
+      rgba(0, 0, 0, 0.92)
+    ),
+    url("/fondo.avif");
 }
 
 /* Encabezado */
