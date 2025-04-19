@@ -12,6 +12,14 @@
   --transition-speed: 0.3s;
   --section-spacing: 5rem;
   --border-radius: 12px;
+  --mobile-width: 480px;
+  --tablet-width: 768px;
+  --desktop-width: 900px;
+  --mobile-font-size: 14px;
+  --mobile-heading-size: 1.5rem;
+  --mobile-title-size: 2rem;
+  --mobile-name-size: 2.4rem;
+  --mobile-profession-size: 1.5rem;
 }
 
 /* Estilos generales */
@@ -19,6 +27,81 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Estilos para móviles */
+@media (max-width: var(--mobile-width)) {
+  .contenedor-principal {
+    padding: 0 15px;
+  }
+  
+  .whatsapp-flotante {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .nav-principal {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: var(--dark-bg);
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+  }
+  
+  .nav-principal.nav-abierto {
+    display: flex;
+  }
+  
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: var(--mobile-font-size);
+  }
+  
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+  }
+  
+  /* Ajustes de fuente para móviles */
+  body {
+    font-size: var(--mobile-font-size);
+  }
+  
+  h1, h2, h3 {
+    font-size: var(--mobile-heading-size);
+  }
+  
+  #inicio .nombre {
+    font-size: var(--mobile-name-size);
+  }
+  
+  #inicio .titulo-profesional {
+    font-size: var(--mobile-profession-size);
+  }
+  
+  .filosofia-titulo {
+    font-size: var(--mobile-heading-size);
+  }
+  
+  .filosofia-descripcion {
+    font-size: var(--mobile-font-size);
+  }
 }
 
 /* Eliminar cualquier línea vertical azul no deseada */
@@ -53,13 +136,15 @@ h1, h2, h3 {
   font-weight: 800;
   margin-bottom: 0.2em;
   display: block;
+  line-height: 1.2;
 }
 #inicio .titulo-profesional {
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.4;
 }
 
-@media (min-width: 600px) {
+@media (min-width: var(--tablet-width)) {
   #inicio .nombre {
     font-size: 2.8rem;
   }
@@ -68,7 +153,7 @@ h1, h2, h3 {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: var(--desktop-width)) {
   #inicio .nombre {
     font-size: 3.2rem;
   }
@@ -84,18 +169,19 @@ h2 {
   position: relative;
   display: inline-block;
   margin-bottom: 2rem;
+  line-height: 1.4;
 }
 
 #sobremi h2 {
   font-size: 2.1rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: var(--tablet-width)) {
   #sobremi h2 {
     font-size: 2.5rem;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: var(--desktop-width)) {
   #sobremi h2 {
     font-size: 3rem;
   }
