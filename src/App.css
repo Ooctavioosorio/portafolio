@@ -18,6 +18,7 @@
   --mobile-title-size: 2rem;
   --mobile-name-size: 2.4rem;
   --mobile-profession-size: 1.5rem;
+  --transition-speed: 0.3s;
 }
 
 /* Estilos generales */
@@ -159,17 +160,7 @@
     color: var(--primary-color);
   }
 
-  .modo-oscuro-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    transition: color var(--transition-speed);
-  }
 
-  .modo-oscuro-btn:hover {
-    color: var(--primary-color);
-  }
 
   .whatsapp-btn {
     display: flex;
@@ -1891,4 +1882,5 @@ p, li, span {
   outline: 3px solid var(--secondary-color);
   outline-offset: 2px;
 }
+
 
