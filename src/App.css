@@ -1814,3 +1814,81 @@ footer {
   }
 }
 
+
+/* Enlace para saltar al contenido principal - accesibilidad */
+.saltar-navegacion {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  z-index: 9999;
+  transition: top 0.3s;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.saltar-navegacion:focus {
+  top: 0;
+  outline: 2px solid var(--secondary-color);
+}
+
+
+/* Mejoras de accesibilidad - Contraste y enfoque */
+:focus {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Mejorar el contraste para tecnologías */
+.tecnologia-tag {
+  color: #333333;
+  background-color: rgba(52, 152, 219, 0.3);
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+/* Estilos para mejorar la lista de tecnologías */
+.tecnologias-lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Indicadores de enfoque mejorados para botones y enlaces */
+.enlace-proyecto:focus,
+.nav-link:focus,
+.whatsapp-btn:focus,
+.email-btn:focus,
+.telefono-btn:focus {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+  text-decoration: underline;
+}
+
+/* Mejorar legibilidad del texto */
+p, li, span {
+  line-height: 1.6;
+  max-width: 70ch; /* Mejora la legibilidad limitando el ancho de línea */
+}
+
+/* Asegurar que el estado de enfoque es visible */
+*:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Estados de foco y hover para el menú hamburguesa */
+.menu-hamburguesa:focus {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+

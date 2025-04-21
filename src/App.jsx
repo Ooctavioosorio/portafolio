@@ -11,6 +11,9 @@ function App() {
 
   return (
     <>
+      {/* Enlace para saltar al contenido principal - visible sólo al navegar con teclado */}
+      <a href="#inicio" className="saltar-navegacion" tabIndex="0">Saltar al contenido principal</a>
+      
       <Encabezado />
 
       <div className="fondo-global">
@@ -38,6 +41,8 @@ function App() {
         target="_blank" 
         rel="noopener noreferrer"
         aria-label="Contactar por WhatsApp"
+        role="button"
+        tabIndex="0"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 39 39">
           <path fill="#00E676" d="M10.7 32.8l.6.3c2.5 1.5 5.3 2.2 8.1 2.2 8.8 0 16-7.2 16-16 0-4.2-1.7-8.3-4.7-11.3s-7-4.7-11.3-4.7c-8.8 0-16 7.2-15.9 16.1 0 3 .9 5.9 2.4 8.4l.4.6-1.6 5.9 6-1.5z"></path>
