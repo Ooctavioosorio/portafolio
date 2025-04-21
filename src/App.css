@@ -1681,3 +1681,136 @@ footer {
     box-shadow: none;
   }
 }
+
+/* Estilos para las imágenes optimizadas */
+.imagen-contenedor {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.imagen-optimizada {
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.imagen-optimizada.cargada {
+  opacity: 1;
+}
+
+.imagen-optimizada:not(.cargada) {
+  opacity: 0;
+}
+
+.imagen-placeholder {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cargando-pulso {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  opacity: 0.3;
+  animation: pulso 1.5s infinite ease-in-out;
+}
+
+@keyframes pulso {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.6);
+    opacity: 0.3;
+  }
+}
+
+.imagen-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  color: #888;
+  font-size: 0.9rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+/* Estilos para imágenes de proyectos */
+.proyecto-imagen-contenedor {
+  margin-bottom: 1.5rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  height: 200px;
+  position: relative;
+}
+
+.proyecto-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tarjeta-proyecto:hover .proyecto-imagen {
+  transform: scale(1.05);
+}
+
+
+/* Estilos para secciones con carga diferida */
+.seccion-diferida {
+  transition: opacity 0.6s ease, transform 0.8s ease;
+}
+
+.seccion-oculta {
+  opacity: 0;
+}
+
+.seccion-visible {
+  opacity: 1;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Clase para secuencias escalonadas de animaciones */
+.seccion-visible .animacion-escalonada > * {
+  opacity: 0;
+  animation: fadeInStaggered 0.5s ease-out forwards;
+}
+
+.seccion-visible .animacion-escalonada > *:nth-child(1) { animation-delay: 0.1s; }
+.seccion-visible .animacion-escalonada > *:nth-child(2) { animation-delay: 0.2s; }
+.seccion-visible .animacion-escalonada > *:nth-child(3) { animation-delay: 0.3s; }
+.seccion-visible .animacion-escalonada > *:nth-child(4) { animation-delay: 0.4s; }
+.seccion-visible .animacion-escalonada > *:nth-child(5) { animation-delay: 0.5s; }
+.seccion-visible .animacion-escalonada > *:nth-child(n+6) { animation-delay: 0.6s; }
+
+@keyframes fadeInStaggered {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -1,6 +1,29 @@
 import TarjetaProyecto from './TarjetaProyecto'
+import { useEffect } from 'react';
 
 function Proyectos() {
+  // Función para precargar imágenes importantes
+  useEffect(() => {
+    const precargarImagenes = () => {
+      const imagenesProyectos = [
+        '/proyectos/mentoria.jpg',
+        '/proyectos/gratia.jpg'
+      ];
+      
+      imagenesProyectos.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+    
+    // Precargar imágenes después de que los componentes principales se hayan cargado
+    const timer = setTimeout(() => {
+      precargarImagenes();
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section id="proyectos">
       <div className="proyectos-encabezado">
@@ -11,13 +34,14 @@ function Proyectos() {
         </p>
       </div>
       
-      <div className="lista-proyectos">
+      <div className="lista-proyectos animacion-escalonada">
         {/* Proyecto 1: Mentoria */}
         <TarjetaProyecto
           titulo="Mentoria - Estar con tu Ser"
           descripcion="Landing page centrada en el bienestar y el desarrollo personal. Presenta la propuesta de mentoria con diseño minimalista, enfoque introspectivo y un formulario de contacto funcional."
           tecnologias={['React', 'CSS', 'Responsive Design']}
           enlaceDemo="https://teloscomunicacioncontuser.com/"
+          imagenSrc="/proyectos/mentoria.jpg"
           logros={[
             'Aumento de consultas en un 45%',
             'Tiempo de carga reducido a 1.5s',
@@ -31,6 +55,7 @@ function Proyectos() {
           descripcion="Tienda online de joyería con catálogo de productos, diseño atractivo y responsivo, ideal para emprendedores que buscan establecer una presencia online profesional y aumentar sus ventas."
           tecnologias={['React', 'CSS', 'E-commerce', 'UX/UI']}
           enlaceDemo="https://gratia-accesorios.netlify.app/"
+          imagenSrc="/proyectos/gratia.jpg"
           logros={[
             'Interfaz de usuario intuitiva para explorar productos',
             'Diseño responsive optimizado para móviles',

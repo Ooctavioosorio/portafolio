@@ -5,6 +5,7 @@ import SobreMi from "./componentes/SobreMi";
 import Proyectos from "./componentes/Proyectos";
 import Contacto from "./componentes/Contacto";
 import PiePagina from "./componentes/PiePagina";
+import SeccionDiferida from "./componentes/SeccionDiferida";
 
 function App() {
 
@@ -14,9 +15,18 @@ function App() {
 
       <div className="fondo-global">
         <Inicio />
-        <SobreMi />
-        <Proyectos />
-        <Contacto />
+        
+        <SeccionDiferida umbral={0.15}>
+          <SobreMi />
+        </SeccionDiferida>
+        
+        <SeccionDiferida umbral={0.15}>
+          <Proyectos />
+        </SeccionDiferida>
+        
+        <SeccionDiferida umbral={0.15}>
+          <Contacto />
+        </SeccionDiferida>
       </div>
 
       <PiePagina />

@@ -1,8 +1,21 @@
+import ImagenOptimizada from './ImagenOptimizada';
 
-function TarjetaProyecto({ titulo, descripcion, tecnologias, enlaceDemo, categoria, logros }) {
+function TarjetaProyecto({ titulo, descripcion, tecnologias, enlaceDemo, categoria, logros, imagenSrc }) {
   return (
     <div className="tarjeta-proyecto">
         <h3 className="proyecto-titulo">{titulo}</h3>
+        
+        {imagenSrc && (
+          <div className="proyecto-imagen-contenedor">
+            <ImagenOptimizada 
+              src={imagenSrc} 
+              alt={`Imagen del proyecto ${titulo}`} 
+              className="proyecto-imagen"
+              height="200px"
+            />
+          </div>
+        )}
+        
         <p className="proyecto-descripcion">{descripcion}</p>
       
       {logros && logros.length > 0 && (

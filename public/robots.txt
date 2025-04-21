@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oscarosorio.netlify.app/sitemap.xml
