@@ -31,11 +31,13 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     </noscript>
-    <link rel="manifest" href="/manifest.json" />
+    <!-- Manifest eliminado -->
     <title>Oscar Osorio | Desarrollador Full Stack</title>
   </head>
   <body>
     <div id="root"></div>
+    <!-- Script para desactivar el Service Worker en todos los entornos -->
+    <script src="/unregister-sw.js"></script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

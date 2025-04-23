@@ -4,16 +4,15 @@ import './index.css'
 import './App.css'
 import App from './App.jsx'
 
-// Registrar el Service Worker para mejorar rendimiento y experiencia offline
+// Desactivación permanente del Service Worker en todos los entornos
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(registration => {
-        console.log('Service Worker registrado correctamente:', registration.scope);
-      })
-      .catch(error => {
-        console.log('Error al registrar el Service Worker:', error);
-      });
+  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    for(let registration of registrations) {
+      registration.unregister();
+      console.log('Service Worker desactivado permanentemente');
+    }
+  }).catch(function(err) {
+    console.log('Error al desactivar Service Worker:', err);
   });
 }
 
