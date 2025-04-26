@@ -44,6 +44,18 @@ function Contacto() {
         </div>
       </div>
       
+    {/* ************************************************************ */}
+      {/* Texto de colaboración con Social Master y PDF */}
+      <div className="colaboracion-social-master">
+        <p style={{ marginTop: '2rem', fontSize: '1rem', lineHeight: '1.5' }}>
+          ¿Necesitas una solución más completa para tu presencia digital? Estoy trabajando en colaboración con <a href="https://socialmasters.taplink.mx/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#007bff' }}>Social Master</a>, una agencia especializada en redes sociales y marketing digital. <br />
+          También puedes <a href="/Social Masters.pdf" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold', color: '#007bff' }}>ver su brochure en PDF</a> para más información.
+        </p>
+      </div>
+
+    {/* ************************************************************ */}
+
+
     </section>
   )
 }
