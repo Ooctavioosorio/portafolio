@@ -35,7 +35,7 @@ function SeccionDiferida({ children, umbral = 0.1, className = '' }) {
       ref={sectionRef} 
       className={`seccion-diferida ${esVisible ? 'seccion-visible' : 'seccion-oculta'} ${className}`}
     >
-      {esVisible && children}
+      {children}
     </div>
   );
 }
