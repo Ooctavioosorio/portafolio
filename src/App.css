@@ -1936,6 +1936,7 @@ p, li, span {
   max-width: 150px;
   width: 100%;
   height: auto;
+  border-radius: var(--border-radius); /* Agregado */
 }
 @media (max-width: 768px) {
   .social-master-logo {
