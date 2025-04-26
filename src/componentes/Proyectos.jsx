@@ -81,6 +81,12 @@ function Proyectos() {
           También puedes <a href="/social.pdf" target="_blank" rel="noopener noreferrer">ver su folleto en PDF</a> para más información.
         </p>
       </div>
+      {/* Asy Rich's Freelance Digital Collaboration */}
+      <div className="colaboracion-social-master">
+        <p>
+          Como freelance desarrollador de software colaboro con <strong>Asy Rich's, Agencia de Medios de EE.UU.</strong>, diseñando e implementando soluciones web, escribiendo código front-end y back-end, integrando APIs de terceros y asegurando un rendimiento óptimo y mantenible de sus aplicaciones digitales.
+        </p>
+      </div>
     </section>
   )
 }
