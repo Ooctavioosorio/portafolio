@@ -78,7 +78,7 @@ function Proyectos() {
         <img src="/logo-social-master.jpg" alt="Social Master" className="social-master-logo" />
         <p>
           ¿Necesitas una solución más completa para tu presencia digital? Estoy trabajando en colaboración con <a href="https://socialmasters.taplink.mx/" target="_blank" rel="noopener noreferrer">Social Master</a>, una agencia especializada en redes sociales y marketing digital.<br />
-          También puedes <a href="/SocialMasters.pdf" target="_blank" rel="noopener noreferrer">ver su folleto en PDF</a> para más información.
+          También puedes <a href="/social.pdf" target="_blank" rel="noopener noreferrer">ver su folleto en PDF</a> para más información.
         </p>
       </div>
     </section>
